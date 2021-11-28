@@ -15,7 +15,7 @@ class login:
         query_vals = (self.username, self.password, self.privilege)
         command_handler.execute("SELECT * FROM users  WHERE username = %s AND password = %s AND privilege = %s",query_vals)
         if command_handler.rowcount <=0:
-            print("Incorrect password! ")
+            print("Incorrect password! Try again ! ")
             main()
         else:
             print("Login succesful! ")
